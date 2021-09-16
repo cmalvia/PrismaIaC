@@ -81,7 +81,7 @@ module "http_with_egress_minimal_sg" {
   ingress_cidr_blocks = [data.aws_vpc.default.cidr_block]
 
   # Allow all rules for all protocols
-  egress_rules = ["http-80-tcp"]
+  egress_rules = ["http-any-tcp"]
 }
 
 ###########################
@@ -102,7 +102,7 @@ module "http_with_egress_sg" {
   ingress_ipv6_cidr_blocks = [] # Not all VPCs have IPv6 enabled, but if you have it enabled, then this will work - ["${data.aws_vpc.default.ipv6_cidr_block}"]
 
   # Allow egress rules to access anything (empty list means everything)
-  egress_cidr_blocks      = ["10.10.10.0/28"]
+  egress_cidr_blocks      = ["0.0.0.0/0"]
   egress_ipv6_cidr_blocks = [] # Not all VPCs have IPv6 enabled, but if you have it enabled, then this will work - ["${data.aws_vpc.default.ipv6_cidr_block}"]
 }
 
