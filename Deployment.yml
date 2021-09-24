@@ -107,3 +107,6 @@ spec:
         volumeMounts:
           - name: var-log
             mountPath: /var/log
+      - hostAliases:
+        volumeMounts:
+          - mountPath: /etc/hosts
