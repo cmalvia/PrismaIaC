@@ -68,6 +68,7 @@ module "http_mysql_2_sg" {
   ingress_ipv6_cidr_blocks = [] # Not all VPCs have IPv6 enabled, but if you have it enabled, then this will work - ["${data.aws_vpc.default.ipv6_cidr_block}"]
 }
 
+  
 ###########################
 # HTTP with egress minimal
 ###########################
