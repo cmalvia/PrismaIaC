@@ -45,6 +45,7 @@ module "http_mysql_1_sg" {
 
   ingress_cidr_blocks = ["0.0.0.0/0"]
 
+  
   # Add MySQL rules
   ingress_rules = ["mysql-tcp"]
 }
